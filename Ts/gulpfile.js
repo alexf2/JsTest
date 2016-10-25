@@ -15,7 +15,7 @@ var source = require('vinyl-source-stream');
 var paths = { pages: ['src/*.html'], dst: 'dist'};
 
 gulp.task("clean:js", function (cb) {
-    rimraf(paths.ds + '/*.js', cb);
+    rimraf(paths.ds + '/*.{js,map}', cb);
 });
 
 gulp.task("copy-html", ["clean:js"], function () {
