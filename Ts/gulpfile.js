@@ -12,6 +12,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var buffer = require('vinyl-buffer');
 var source = require('vinyl-source-stream');
 
+var open = require('gulp-open');
+
 var paths = { pages: ['src/*.html'], dst: 'dist'};
 
 gulp.task("clean:js", function (cb) {
@@ -41,8 +43,16 @@ gulp.task("default", ["copy-html"], function () {
 
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(sourcemaps.write('./'))    
 
     .pipe(gulp.dest(paths.dst));
+});
+
+gulp.task('run', function(){
+    var options = {        
+        app: 'chrome'
+    };
+    gulp.src('dist/index.html')
+        .pipe(open(options));
 });
