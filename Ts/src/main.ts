@@ -1,6 +1,8 @@
 import {sayHello} from "./greet"; 
 import * as w from "./Wallet";
 import * as iw from "./IWallet";
+import milesTest from "./milesTest"
+import aclass from "./aclass"
 
 function hello1(hostId: string, compiler: string) {
     //console.log(`Hello from ${compiler}`);    
@@ -56,3 +58,6 @@ var {a, b} = new Tst(11, 12);
 console.log('a=' + a);  
 console.log('b=' + b);
 
+milesTest(25, "YARDS");
+
+console.log(new aclass('tst', 100).name);
