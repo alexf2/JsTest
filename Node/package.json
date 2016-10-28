@@ -1,0 +1,23 @@
+{
+  "name": "test-node",
+  "version": "1.0.0",
+  "description": "test desc",
+  "repository": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Alexey Fedorov",
+  "license": "BSD-3-Clause",
+  "dependencies": {},
+  "devDependencies": {
+    "rimraf": "^2.5.4"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
