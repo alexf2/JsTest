@@ -15,7 +15,10 @@
   "license": "BSD-3-Clause",
   "dependencies": {},
   "devDependencies": {
-    "rimraf": "^2.5.4"
+    "eslint": "^3.9.0",
+    "eslint-config-google": "^0.7.0",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.0.6"
   },
   "engines": {
     "node": ">=4.0.0"

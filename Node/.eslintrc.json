@@ -1,0 +1,26 @@
+{
+    "extends": "google",
+    "installedESLint": true,
+
+     "env": {
+        "browser": true,
+        "node": true
+    },
+
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": false
+        }
+    },
+    "rules": {
+        "semi": 2,
+	"linebreak-style": ["error", "windows"],
+	"quotes": ["off", "double"],
+
+	"no-undef": 1,
+        "no-unused-vars": 1
+    }
+
+}

@@ -5,7 +5,7 @@
             "name": "Launch",
             "type": "node2",
             "request": "launch",
-            "program": "${workspaceRoot}/src/app.js",
+            "program": "${workspaceRoot}/src/echo_server.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
