@@ -6,6 +6,7 @@ class Logger {
     }
 }
 
+
 module.exports = function(m) {
     return new Logger(m);
 };

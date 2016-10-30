@@ -1,7 +1,7 @@
 {
-    "typescript.tsdk": "./node_modules/typescript/lib",
-
- 	 "files.exclude": {
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	
+	 "files.exclude": {
         "**/.git": true,         // this is a default value
         "**/.DS_Store": true,    // this is a default value
 
@@ -9,6 +9,4 @@
                                  // named "node_modules" from 
                                  // the explore tree         
     }
-
-
 }
