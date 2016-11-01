@@ -1,10 +1,9 @@
 'use strict';
 
-let welcome = require('./welcome');
+import welcome from './welcome';
+//let welcome = require('./welcome');
 
-welcome("home");
+welcome(`home on behalf of ${USER}`);
 
-exports.welcome = welcome;
-
-
-
+//exports.welcome = welcome;
+export {welcome};
