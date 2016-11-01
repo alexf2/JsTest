@@ -2,6 +2,6 @@
 
 import welcome from './welcome';
 
-welcome('about');
+welcome("about");
 
 export {welcome};

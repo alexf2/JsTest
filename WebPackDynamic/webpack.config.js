@@ -8,22 +8,20 @@ module.exports = {
 
     entry: {
         home:  "./home",
-        about: "./about",
-        common: "./common"
     },
 
     output: {
         path: __dirname + "/dist",
         filename: "[name].js",
-        library: "[name]"
+        library: "[name]",
+	      publicPath: '/dist/'
     },
 
     devtool: "source-map",
 
     plugins: [
         new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV), USER: JSON.stringify(process.env.USER)}),
-        new webpack.optimize.CommonsChunkPlugin({name: "common", minChunks: 2})                         
+        new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV), USER: JSON.stringify(process.env.USER)})
     ],
 
     resolve: {
