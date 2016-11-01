@@ -3,7 +3,8 @@
 <head>
   
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../dist/home.css" media="screen" />
+  <!--script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.js"></script-->
   <script src="../dist/home.js"></script>
 </head>
 
@@ -11,12 +12,13 @@
 
   <script>
     home.welcome("something?");
+    console.log( home.getUsers() );
   </script>
 
-  <p/>
-    &nbsp;&nbsp;&nbsp;<input type="button" name="alert" id="alert"  onclick="home.doLogin()" value="Login"  />
-    &nbsp;&nbsp;&nbsp;<input type="button" name="alert2" id="alert2"  onclick="home.doLogout()" value="Logout"  />
-  <p/>
+  <div class='main'>
+    <input type="button" name="alert" id="alert"  onclick="home.doLogin()" value="Login"  />&nbsp;&nbsp;&nbsp;
+    <input type="button" name="alert2" id="alert2"  onclick="home.doLogout()" value="Logout"  />
+  </div>
 </body>
 
 </html>

@@ -425,3 +425,10 @@ td,
 th {
   padding: 0;
 }
+
+.main {
+  margin: 10px;
+  padding: 10px;
+  background-color: #aa9977;
+  float: left;
+}

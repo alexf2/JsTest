@@ -2,9 +2,11 @@
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    context: __dirname + "/src",
+    context: path.resolve(__dirname, "src"),
 
     entry: {
         home:  "./home",
@@ -17,16 +19,22 @@ module.exports = {
 	      publicPath: '/dist/'
     },
 
+    externals: {
+      lodash: "_"
+    },
+
     devtool: "source-map",
 
     plugins: [
         new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV), USER: JSON.stringify(process.env.USER)})
+        new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV), USER: JSON.stringify(process.env.USER)}),
+        new webpack.ProvidePlugin({shuffle: 'lodash/shuffle'}),
+        new ExtractTextPlugin('[path]/[name].css', {allChunks: true})
     ],
 
-    resolve: {
+  resolve: {
     modulesDirectories: ['node_modules'],
-    extensions:         ['', '.js']
+    extensions:         ['', '.js']         
   },
 
   resolveLoader: {
@@ -46,6 +54,11 @@ module.exports = {
                 presets: ['es2015'],
                 plugins: ['transform-runtime']
             }
+    },
+    
+     {
+        test:   /\.css$/,
+        loader: ExtractTextPlugin.extract('css') //'style!css'
     }]
 
   }
