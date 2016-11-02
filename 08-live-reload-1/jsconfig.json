@@ -1,0 +1,11 @@
+{
+    "files": ["backend/*.js"],    
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "diagnostics": true        
+    },
+    "exclude": [
+        "node_modules", "bower_components", "dist"
+    ]
+}
