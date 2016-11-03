@@ -95,11 +95,19 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__(1);
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
+
 
 	__webpack_require__.e/* nsure */(1, function(require) {
 
-	  let Menu = __webpack_require__(1).default;
+	  let Menu = __webpack_require__(2).default;
 	  let pandaMenu = new Menu({
 	    title: "Меню панды",
 	    items: [{
