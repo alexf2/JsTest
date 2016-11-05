@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "rimraf js/*.{js,map}",
+    "build": "echo \"Using typescript: \" && tsc --version && tsc -p js && echo \"Browserifying: \" && browserify js/app.js -o js/bundle.js && exit 0"
+  },
+  "dependencies": {
+    "classnames": "^2.1.5",
+    "director": "^1.2.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.0.3"
+  }
+}
