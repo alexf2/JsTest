@@ -1,6 +1,5 @@
 'use strict';
 
-
 require.ensure([], function(require) {
 
   let Menu = require('./menu').default;

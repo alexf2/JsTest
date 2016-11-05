@@ -104,11 +104,10 @@
 
 	'use strict';
 
+	__webpack_require__.e/* nsure */(1, function (require) {
 
-	__webpack_require__.e/* nsure */(1, function(require) {
-
-	  let Menu = __webpack_require__(2).default;
-	  let pandaMenu = new Menu({
+	  var Menu = __webpack_require__(2).default;
+	  var pandaMenu = new Menu({
 	    title: "Меню панды",
 	    items: [{
 	      text: 'Яйца',
@@ -123,9 +122,7 @@
 	  });
 
 	  document.body.appendChild(pandaMenu.elem);
-
 	});
-
 
 /***/ }
 /******/ ]);
