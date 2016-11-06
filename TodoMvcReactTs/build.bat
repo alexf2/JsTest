@@ -3,6 +3,13 @@
 rem npm i
 rem tsd install
 
+
+rem Start build automatically
+rem npm run build
+
+
+rem Building manually
+
 call tsc --version
 
 call tsc -p js
