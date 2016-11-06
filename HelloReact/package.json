@@ -54,6 +54,7 @@
     "tslint-loader": "^2.1.0"
   },
   "scripts": {
+    "gulp": "gulp",
     "build": "gulp",
     "build:dev": "gulp build:dev",
     "serve": "gulp serve",

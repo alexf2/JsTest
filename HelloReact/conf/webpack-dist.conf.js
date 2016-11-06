@@ -44,7 +44,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
     }),
-    new ExtractTextPlugin('index-[contenthash].css'),
+    new ExtractTextPlugin({filename: 'css/[name]-[contenthash].css', allChunks: true}),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor'})
   ],
   postcss: () => [autoprefixer],
