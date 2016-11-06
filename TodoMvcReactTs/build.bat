@@ -4,7 +4,7 @@ rem npm i
 rem tsd install
 
 
-rem Start build automatically
+rem Start build automatically: uses package.config scripts
 rem npm run build
 
 
