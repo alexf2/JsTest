@@ -6,3 +6,11 @@ interface IHelloProps {
 interface IHelloState {
     count: number
 }
+
+interface IEvProps {
+
+} 
+
+interface IEvState {
+    isOn: boolean
+}

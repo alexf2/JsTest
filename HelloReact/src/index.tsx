@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { Hello } from './app/hello';
+import { EventComponent } from './app/events';
 
 import './index.less';
 
@@ -33,6 +34,11 @@ ReactDOM.render(
         User: {formatUsr(usr)}
       </h2>
     </div>
+
+    <div>
+      <EventComponent />
+    </div>
+
   </div>,
   document.getElementById('root'));
 

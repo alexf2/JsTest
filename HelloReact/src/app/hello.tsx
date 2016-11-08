@@ -38,7 +38,7 @@ export class Hello extends React.Component<IHelloProps, IHelloState> {
 
   render() {
     return (
-      <h1>Count = {this.state.count}</h1>
+      <h1>Count = {this.state.count}, {this.props.msg}</h1>
     );
   }
 }
