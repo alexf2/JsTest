@@ -5,8 +5,11 @@ import * as ReactDOM from 'react-dom';
 
 import { Hello } from './app/hello';
 import { EventComponent } from './app/events';
+import {LoginControl} from './app/loginControl';
 
 import './index.less';
+
+
 
 class UserData {
   constructor(private _name: string, private _surname: string) {
@@ -37,6 +40,10 @@ ReactDOM.render(
 
     <div>
       <EventComponent />
+    </div>
+
+    <div>
+      <LoginControl isLogged={false} />
     </div>
 
   </div>,

@@ -14,3 +14,11 @@ interface IEvProps {
 interface IEvState {
     isOn: boolean
 }
+
+interface ILoginProps {
+    isLogged: boolean;
+}
+
+interface ILoginState {
+    isLogged: boolean;
+}
