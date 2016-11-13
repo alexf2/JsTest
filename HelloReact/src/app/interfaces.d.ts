@@ -9,7 +9,7 @@ interface IHelloState {
 
 interface IEvProps {
 
-} 
+}
 
 interface IEvState {
     isOn: boolean
@@ -21,4 +21,25 @@ interface ILoginProps {
 
 interface ILoginState {
     isLogged: boolean;
+}
+
+type ListItem = {
+    name: string;
+    value: any;
+    id?: number;
+}
+
+interface IListProps {
+    items: ListItem[];
+}
+
+interface ITemperatureProps {
+    scale: string;
+    value: string;
+    onChange: (string) => void;
+}
+
+interface ITemperatureState {
+    value: string;
+    scale: string;
 }

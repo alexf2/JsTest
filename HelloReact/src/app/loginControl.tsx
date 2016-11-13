@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export class LoginControl extends React.Component<ILoginProps, ILoginState> {
     constructor(isLogged) {
-        super({isLogged});
+        super(isLogged);
         this.state = isLogged;
     }
 

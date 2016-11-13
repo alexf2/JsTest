@@ -1,0 +1,18 @@
+body {
+  background-color: lightgray;
+}
+.SplitPage {
+  background-color: #967896;
+  border: 1px solid #cc7896;
+  box-sizing: border-box;
+}
+.SplitPage,
+.SplitPage .right,
+.SplitPage .left,
+.SplitPage .mid {
+  float: left;
+}
+.SplitPage .mid {
+  background-color: #ff5544;
+  height: 100%;
+}
