@@ -39,7 +39,9 @@ const blist: ListItem[] = [
 
 let st = { clear: 'both' };
 
-ReactDOM.render(
+let calcV = {val: 11};
+
+var rootEl = ReactDOM.render(
   <div>
     <div>
       <Hello />
@@ -62,8 +64,8 @@ ReactDOM.render(
 
     <BasicList items={blist} />
     <br />
-    <Calculator />
-    <br />
+    <Calculator key='1' testVal={calcV.val} />
+    <br />    
     <MainPane />
     <div style={st}>
       Children: <Children>
@@ -74,3 +76,5 @@ ReactDOM.render(
     </div>
   </div>,
   document.getElementById('root'));
+
+  

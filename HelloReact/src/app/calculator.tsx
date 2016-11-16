@@ -43,7 +43,7 @@ const BoilingVerdict = (props: {celsius: number}) => {
     return <p>{res}</p>; 
 }
 
-class Calculator extends React.Component<null, ITemperatureState> {
+class Calculator extends React.Component<ICalculatorProps, ITemperatureState> {
     constructor(props) {
         super(props);
 
@@ -54,7 +54,33 @@ class Calculator extends React.Component<null, ITemperatureState> {
 
      handleFahrenheitChange = (value: string) => this.setState({value, scale: 'f'});
 
+     componentWillMount() {
+         console.log('componentWillMount');
+     }
+     componentDidMount() {
+         console.log('componentDidMount');
+     }
+     componentWillReceiveProps(nextProps: ICalculatorProps, nextContext: any) {
+         console.log('componentWillReceiveProps');         
+     }
+     shouldComponentUpdate(nextProps: ICalculatorProps, nextState: ITemperatureState, nextContext: any) {
+         console.log(`shouldComponentUpdate: ${JSON.stringify(nextState)}`);
+         let {value: val, scale: sc} = this.state;
+         return nextState.value !== val || nextState.scale !== sc;
+     }
+     componentWillUpdate(nextProps: ICalculatorProps, nextState: ITemperatureState, nextContext: any) {
+         console.log(`componentWillUpdate: ${JSON.stringify(nextState)}`);         
+     }     
+     componentDidUpdate(nextProps: ICalculatorProps, nextState: ITemperatureState, nextContext: any) {
+         console.log('componentDidUpdate');
+     }
+     componentWillUnmount() {         
+         console.log('componentWillUnmount');
+     }
+
      render() {
+         console.log('Render');
+
          const scale = this.state.scale;
          const value = this.state.value;
 

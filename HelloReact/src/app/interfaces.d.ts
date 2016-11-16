@@ -43,3 +43,7 @@ interface ITemperatureState {
     value: string;
     scale: string;
 }
+
+interface ICalculatorProps {
+    testVal: number;    
+}

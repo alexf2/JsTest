@@ -10,11 +10,11 @@ const pkg = require('../package.json');
 module.exports = {
   module: {
     preLoaders: [
-      {
+      /*{
         test: /\.tsx$/,
         exclude: /node_modules/,
         loader: 'tslint'
-      }
+      } */
     ],
 
     loaders: [
