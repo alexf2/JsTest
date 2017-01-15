@@ -8,6 +8,8 @@ import DockMonitor from 'redux-devtools-dock-monitor';
 
 import {Hello} from './app/hello';
 
+import im from 'immutable'
+
 import './index.less'
 
 /*let tools = createDevTools(
@@ -54,3 +56,19 @@ const render = () => {
 store.subscribe( () => render())
 
 render()
+
+const test1 = () => {
+  //debugger
+  let map1 = im.Map({a:1, b:2, c:3})
+  let map2 = map1.set('b', 50)
+
+  console.log(map1.toJS())
+  console.log(map2.toJS())
+
+  let m = im.fromJS({a:12, obj:{b:11, c:100, m:{ss: 'xxx'}}})
+
+  console.log(m.first())
+  console.log(m.getIn(['obj', 'b'], 999))
+}
+
+test1()
