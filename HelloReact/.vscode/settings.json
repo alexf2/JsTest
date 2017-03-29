@@ -2,6 +2,7 @@
 	"typescript.tsdk": "./node_modules/typescript/lib",
 
 	"bookmarks.saveBookmarksBetweenSessions": true,
+	 "bookmarks.navigateThroughAllFiles": true,
 	
 	 "files.exclude": {
         "**/.git": true,         // this is a default value

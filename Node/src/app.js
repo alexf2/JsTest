@@ -3,6 +3,7 @@ let Logger = require('./logger')(module); //модуль публикует фа
 
 let EE = require('events').EventEmitter;
 let util = require('util');
+let url = require('url');
 
 let server = new EE;
 
@@ -23,6 +24,8 @@ function run() {
   }
 }
 
+console.log( url.parse('http://abc.hjh.com:128/yyy/c') )
+
 server.on(EV_REQUEST, req => req.approved = true);
 server.on(EV_REQUEST, req => console.log(util.inspect(req)));
 
@@ -35,3 +38,9 @@ else {
 }
 
 console.log(`NODE_ENV = ${process.env.NODE_ENV}`);
+
+
+let v = 'xxghпр%20%20YY';
+console.log(v)
+console.log(unescape(v))
+console.log(decodeURI(v))

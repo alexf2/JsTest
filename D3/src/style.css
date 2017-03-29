@@ -1,0 +1,35 @@
+.active {
+    color: red
+}
+
+.menu-item {
+    display: inline;
+    margin: 20px;
+}
+
+.list-block {
+    display: table-cell;
+    width: 200px;
+    margin-right: 20px;
+    border-right: 1px solid black;
+}
+
+.details-block {
+    padding-left: 20px;
+    display: table-cell;
+}
+
+.datepicker-block {
+    position: absolute;
+    background-color: white;
+}
+
+.chart-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    fill: green;
+    stroke: none
+}
+.axises {
+    opacity: 0.5
+}
