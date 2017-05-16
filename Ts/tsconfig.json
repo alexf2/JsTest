@@ -1,5 +1,4 @@
 {
-    "files": ["src/*.ts"],    
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "es5",
@@ -8,5 +7,13 @@
     },
     "exclude": [
         "node_modules"
-    ]    
+    ],
+
+    "include": [
+        "src/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
 }
